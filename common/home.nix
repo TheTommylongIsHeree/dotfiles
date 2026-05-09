@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   catppuccin.enable = true;
   catppuccin.flavor = "mocha";
   catppuccin.accent = "sky";
@@ -10,5 +10,6 @@
     ./vscode.nix
     ./starship.nix
     ./zellij.nix
+    ./default.nix
   ];
 }

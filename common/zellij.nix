@@ -9,6 +9,29 @@ in
 {
   programs.zellij = {
     enable = true;
+    settings = {
+      theme = "catppuccin-mocha";
+      default_shell = "fish";
+      pane_frames = false;
+      mouse_mode = true;
+      copy_command = "wl-copy";
+
+      ui = {
+        pane_frames = {
+          rounded_corners = true;
+        };
+      };
+
+      keybinds = {
+        unbind = [ "Ctrl g" ];
+        normal = {
+          "bind \"Ctrl a\"" = { SwitchToMode = "Tmux"; };
+        };
+        tmux = {
+          "bind \"Ctrl a\"" = { Write = 1; SwitchToMode = "Normal"; };
+        };
+      };
+    };
   };
 
   home.file.".config/zellij/plugins/zjstatus.wasm".source = zjstatus;

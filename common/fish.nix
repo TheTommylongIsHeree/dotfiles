@@ -4,8 +4,12 @@
 
     interactiveShellInit = ''
       set fish_greeting
-
     '';
+
+    shellAliases = {
+      cat = "bat --color=always";
+      less = "less -R";
+    };
 
     shellAbbrs = {
       ls = "eza --icons";
